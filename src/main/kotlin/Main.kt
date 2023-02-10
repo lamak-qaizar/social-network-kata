@@ -6,12 +6,6 @@ fun main(args: Array<String>) {
     println("Program arguments: ${args.joinToString()}")
 }
 
-class User(val postings:MutableList<String>){
-    fun post(message: String){
-        postings.add(message)
-    }
+class User(val subscribedList:MutableList<String>){
 
-    fun view():List<String>{
-        return this.postings
-    }
 }

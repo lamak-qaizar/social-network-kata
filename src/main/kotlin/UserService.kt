@@ -18,4 +18,15 @@ class UserService {
         }
     }
 
+    fun getSubscribedTimeline(subscribedList: List<String>): List<String> {
+
+        val subscribedTimeline = mutableListOf<String>()
+        subscribedList.forEach{ userId ->
+            postings[userId]?.let{
+                subscribedTimeline.addAll(it)
+            }
+        }
+         return  subscribedTimeline
+    }
+
 }
